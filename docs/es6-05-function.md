@@ -70,7 +70,7 @@ myFunction(...iterableObj)
 ```JavaScript
 [...iterableObj, 4,4,5]
 ```
-#### 用法
+#### 应用
 ##### 替代数组的apply方法
 ES6之前，在需要数组作为函数的参数，通常使用`Function.prototype.apply()`方法
 ```JavaScript
@@ -88,4 +88,14 @@ function f(x, y, z) {
 var args =[1,2,3];
 f(...args)
 ```
-####
+#### 合并数组
+```JavaScript
+
+var arr1 = [1,2,3,4];
+var arr2 = [5,6,7,8];
+// es5  写法
+arr1.concat(arr2);
+
+// ES6
+[...arr1, ...arr2]
+```
